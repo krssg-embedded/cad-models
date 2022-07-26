@@ -1,0 +1,1514 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 05/30/18 by Ankush
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = _
+Application.SldWorks
+
+swApp.ActivateDoc2 "Plunger_Drawings - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.16424340753236782, 0.10849690876763193, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.086505426950324607, 0.15106103726189021, 250.0035, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.066301693869095416, 0.13391135685573055, 250.0035, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.066536620997946896, 0.13438121111343357, 250.0035, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.066536620997946896, 0.13438121111343357, 250.0035)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.066301693869095416, 0.13391135685573055, 250.0035)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.066301693869095416, 0.13391135685573055, 250.0035, True, 0, Nothing, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.04862897497734632, 0.1423687334926389, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.073349507734640482, 0.1498864016176327, 250.00350000000006, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.081806884373294544, 0.15834377825454102, 0)
+Part.ClearSelection2 True
+Part.EditDelete
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.073584434863491963, 0.14941654735992971, 250.00350000000006, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.094023095073572663, 0.14965147448878119, 250.0035, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.057717653770797447, 0.1627601047453362, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.057717653770797447, 0.1627601047453362, 0, False, 0, Nothing, 0)
+Part.OpenCompFile
+Set Part = swApp.OpenDoc6("D:\KRSSG\Kicker\Kicker_V3\Plunger_Front.SLDPRT", 1, 0, "", longstatus, longwarnings)
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 22
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Front", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Chamfer1", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.0055236767736346337, 0.00093892190076871884, 0.065009067077085092, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.0054771746826247636, -0.00069938614942088861, 0.065008741009933146, True, 0, Nothing, 0)
+Dim myFeature As Object
+Set myFeature = Part.FeatureManager.InsertFeatureChamfer(4, 1, 0.001, 0.78539816339745006, 0, 0, 0, 0)
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Plunger_Front"
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Drawings - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.034720153040777621, 0.12082348576706475, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.072091091727059839, 0.13570422153529393, 250.00349999999997, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.070379899385322894, 0.076982743667559694, 250.0325, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.072332311829281681, 0.14400905314014822, 250.0035, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.079314553698871859, 0.15082891729184095, 250.0035, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.073793711290358693, 0.15001702870235373, 250.00350000000006, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.2680578432791636, 0.21232312012623025, 250.01515783873253, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.26685478709701532, 0.21747907519258011, 250.01703242716749, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View4")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.26616732642150198, 0.20630783921548876, 250.01299141318287, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+
+Dim myNote As Object
+Dim myAnnotation As Object
+Dim myTextFormat As Object
+Set myNote = Part.InsertNote("CTQ")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.024856896257837685, 0.14412737944676163, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.ActivateSheet("Sheet1")
+
+Set myNote = Part.InsertNote("""RD3@Drawing View3""")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.1878239109677606, 0.098350128123749589, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem674@Sheet1", "NOTE", 0.19179127274908828, 0.096519038070829108, 0, False, 0, Nothing, 0)
+
+Set myNote = Part.InsertNote("""RD3@Drawing View3""")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swBENT, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.17988918740510515, 0.13283565745375198, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.Extension.SelectByID2("DetailItem675@Sheet1", "NOTE", 0.18751872929227384, 0.13314083912923874, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("DetailItem674@Sheet1", "NOTE", 0.19331718112652205, 0.095908674719855605, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem674@Sheet1", "NOTE", 0.19240163610006181, 0.097739764772776086, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.029434621390138888, 0.14351701609578815, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.048661066945803938, 0.14229628939384115, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.048661066945803938, 0.14229628939384115, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.030655348092085866, 0.13466674750667249, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.048966248621290703, 0.14290665274481465, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.040421161707661774, 0.14229628939384115, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.0483558852703172, 0.14199110771835441, 0, True, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.048966248621290703, 0.13314083912923874, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.17653218897475095, 0.16579527840632069, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.053849155429078643, 0.16487973337986045, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.036758981601820812, 0.13985483598994719, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.04744034024385696, 0.14138074436738091, 0, True, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.047745521919343697, 0.14351701609578815, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.0523232470516449, 0.1621330983004797, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.0523232470516449, 0.1621330983004797, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.038590071654741293, 0.14168592604286767, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.053849155429078643, 0.14382219777127489, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.024246532906864182, 0.16243827997596647, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.041031525058635276, 0.14260147106932791, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.05323879207810514, 0.15847091819463874, 0, True, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.031876074794032871, 0.16365900667791344, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.053849155429078643, 0.1575553731681785, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.17439591724634371, 0.17067818521410863, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.036758981601820812, 0.14016001766543393, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.017837717721642499, 0.15053619463198331, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Plunger_Drawings.SLDDRW", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+Part.DimPreferences
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.037674526628281052, 0.14107556269189417, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.12953421094979189, 0.078208137541624284, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View3", "DIMENSION", 0.20155708636466421, 0.090110222885607411, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.19057054604714133, 0.05745578360852549, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View1", "DIMENSION", 0.1272351569137892, 0.092143490621216101, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Plunger_Drawings.SLDDRW", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+Part.DimPreferences
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingNoteTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingNoteTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingBalloonTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingBalloonTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingAngularRunningDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingAngularRunningDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingAnnotationTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingAnnotationTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingLinearDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingLinearDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingDiameterDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingDiameterDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingRadiusDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingRadiusDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingHoleDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingHoleDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingAngleDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingAngleDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingChamferDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingChamferDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingOrdinateDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingOrdinateDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDatumTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDatumTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingSurfaceFinishTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingSurfaceFinishTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingGeometricToleranceTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingGeometricToleranceTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingWeldSymbolTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingWeldSymbolTextFormat, 0, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingArcLengthDimension)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingDimensionTextFormat, swUserPreferenceOption_e.swDetailingArcLengthDimension, myTextFormat)
+Set myTextFormat = Part.Extension.GetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingLocationLabelTextFormat, 0)
+myTextFormat.CharHeight = 0.003175
+boolstatus = Part.Extension.SetUserPreferenceTextFormat(swUserPreferenceTextFormat_e.swDetailingLocationLabelTextFormat, 0, myTextFormat)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.035333526150535505, 0.14183625689706136, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View2", "DIMENSION", 0.04656042605064592, 0.14159219385575461, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.040946976100590726, 0.14256844602098162, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.13564343612760901, 0.16062911107768096, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.045656691779734387, 0.14488327923576061, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.083109314237656023, 0.12407626675913749, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.068841648539400169, 0.13061561353750478, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem676@Drawing View2", "NOTE", 0.069436134610160821, 0.12823766925446212, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.12442609615552194, 0.12645421104218013, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.10778048617422345, 0.13091285657288509, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem673@Sheet1", "NOTE", 0.045656691779734387, 0.1436943070942393, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("DetailItem676@Drawing View2", "NOTE", 0.081325856025374038, 0.12140107944071452, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.053682253735003321, 0.14309982102347862, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem677@Drawing View2", "NOTE", 0.056951927124186952, 0.14191084888195732, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.14107170613682044, 0.1279404262190818, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.10569978492656115, 0.13061561353750478, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View2", "DIMENSION", 0.092323848334446262, 0.12972388443136379, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.11550880509411202, 0.12437350979451782, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("Drawing View2", "DRAWINGVIEW", 0.1119418886695481, 0.15112538297874756, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.14166619220758112, 0.14963916780184591, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View3", "DIMENSION", 0.19999461055014539, 0.081235641695179564, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.17784075879122135, 0.10650744296091515, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View3", "DIMENSION", 0.18764533206627501, 0.083261263812466235, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View3", "DIMENSION", 0.20135034002640365, 0.083065477984464398, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View3", "DIMENSION", 0.20174191168240732, 0.082086548844455209, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem674@Sheet1", "NOTE", 0.19097369114230625, 0.097553629256600355, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.17570239655816294, 0.098336772568607705, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem674@Sheet1", "NOTE", 0.19077790531430441, 0.081499191360449696, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.20918177314647712, 0.072688829100367003, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem678@Drawing View3", "NOTE", 0.21172698891050101, 0.068968898368332102, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.17746446901017948, 0.10146934581663711, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View3", "DIMENSION", 0.24540215132681706, 0.10127355998863527, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View3", "DIMENSION", 0.25597458603891626, 0.098140986740605868, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 4, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 4, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 0, True, 12, 12, "<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth>", "", False, "<MOD-DIAM> <hw-thruholedia> <hw-thru>", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Plunger_Drawings.SLDDRW", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+Part.DimPreferences
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.19723883763836506, 0.037447380060036284, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.16571731933006922, 0.057221748688221857, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("DetailItem678@Drawing View3", "NOTE", 0.19147166240843022, 0.083714592329995938, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.21148209080324837, 0.066782691380534415, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View3", "DIMENSION", 0.21653967160633431, 0.066123006927958, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem679@Drawing View3", "NOTE", 0.2156600923362324, 0.065683217292907048, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View3", "DIMENSION", 0.21851872496406355, 0.060185846854770186, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem679@Drawing View3", "NOTE", 0.21851872496406355, 0.051829843788802163, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.23764957408877985, 0.054468581599107849, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.16151864376130196, 0.23642381555153694, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.074331762753925348, 0.15071437510285052, 250.00350000000006, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.07349869663306681, 0.15029784204242125, 250.00350000000006, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.07349869663306681, 0.15050610857263588, 250.00350000000006, True, 0, Nothing, 0)
+' MSGBOX
+' Cannot create chamfer with the selected edge.
+' Please select another edge.
+
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.073915229693496079, 0.15092264163306515, 250.00350000000006, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.072873897042422905, 0.14696557755898709, 250.0035, True, 0, Nothing, 0)
+Dim myDim As Object
+Set myDim = Part.AddChamferDim(0.040800851389369161, 0.17112449506213898, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View2", "DIMENSION", 0.040384318328939892, 0.17216582771321215, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View2", "DIMENSION", 0.036218987724647184, 0.18007995586136827, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.14076878589239383, 0.17091622853192434, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View2", "DIMENSION", 0.039967785268510622, 0.17924688974050973, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.032470190180783759, 0.16279383385355356, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.071207764800705828, 0.13655225104825536, 250.00349999999997, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.067458967256842403, 0.13551091839718218, 250.0035, True, 0, Nothing, 0)
+Set myDim = Part.AddChamferDim(0.071207764800705828, 0.13467785227457788, 0)
+boolstatus = Part.Extension.SelectByID2("RD7@Drawing View2", "DIMENSION", 0.10411387657461814, 0.11968266209912418, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View2", "DIMENSION", 0.036190606052399821, 0.18096075475681395, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.2168367526376444, 0.091733442661650177, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem631@Sheet1", "NOTE", 0.28436255546770051, 0.11009909246821592, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.Extension.SelectByID2("DetailItem631@Sheet1", "NOTE", 0.27555841038286844, 0.11087592879923051, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.26727215618537942, 0.12123374654609179, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.26856688340373708, 0.092490802298551764, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem680@Drawing View3", "NOTE", 0.27426368316451077, 0.088606620643478795, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.24241339359291236, 0.1318505097366246, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem631@Sheet1", "NOTE", 0.23257346673339419, 0.15463770877971938, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.24189550270556931, 0.091196075080194103, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.19140114118962059, 0.11760851033469034, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View4")
+boolstatus = Part.Extension.SelectByID2("Drawing View4", "DRAWINGVIEW", 0.32344657948989786, 0.1833054396847959, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.38893179532431965, 0.13286412478530887, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.41899025316455685, 0.20903321880650982, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Title Block Table1", "TITLEBLOCK", 0.29398120584856025, 0.040571917230492451, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA001_Plunger_Front.PDF", 0, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.NewSheet3("Sheet2", 12, 12, 2, 1, False, "C:\ProgramData\SolidWorks\SOLIDWORKS 2016\lang\english\sheetformat\KRSSG-A3-Landscape.slddrt", 0.41999999999999998, 0.29699999999999999, "Default")
+Dim myView As Object
+Set myView = Part.DropDrawingViewFromPalette(185, 0.093042151898734188, 0.10823582278481014, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Set myView = Part.CreateUnfoldedViewAt3(0.093042151898734188, 0.21725039783001807, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+Set myView = Part.CreateUnfoldedViewAt3(0.27327227848101265, 0.10823582278481014, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Set myView = Part.CreateUnfoldedViewAt3(0.23026904159132, 0.24546271247739596, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Drawing View6", "DRAWINGVIEW", 0.10728526220614829, 0.1531564014466546, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0.10783307414104884, 0.096731772151898765, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View8")
+boolstatus = Part.Extension.SelectByID2("Drawing View8", "DRAWINGVIEW", 0.20698703435804697, 0.2035550994575045, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View8", "DRAWINGVIEW", 0.24642949367088604, 0.20245947558770344, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.16644895117540684, 0.063315244122965658, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Drawing View6", "DRAWINGVIEW", 0.11933712477396022, 0.15753889692585896, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0.11769368896925855, 0.097827396021699847, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Drawing View6", "DRAWINGVIEW", 0.11714587703435805, 0.1569910849909584, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.16973582278481011, 0.16794732368896925, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("DetailItem684@Drawing View6", "NOTE", 0.13229158074043079, 0.28051770703947304, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.15834090892739738, 0.27713467740480202, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.099107702089436089, 0.26758412569389883, 250.00349999999995, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.093984249738591208, 0.15059863034960835, 250.0035, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.13297245931283908, 0.20903321880650988, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.097471057901044211, 0.26772128725366889, 250.00349999999995, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.097972459312839072, 0.27703321880651, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.087479930202760042, 0.16457758660373545, 250.00349999999995, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10893146908437015, 0.163402159815702, 250.00349999999995, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.097972459312839072, 0.1410332188065099, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.081308939565584548, 0.16722229687681064, 250.00349999999995, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.094238634233952262, 0.15135403523835936, 250.0035, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.093650920839935564, 0.15076632184434263, 250.0035, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.093650920839935564, 0.15076632184434263, 250.0035)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.094238634233952262, 0.15135403523835936, 250.0035)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.094238634233952262, 0.15135403523835936, 250.0035, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.062972459312839069, 0.15752502587378908, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Hole Thread3@Plunger_Rear-1@Drawing View5", "CTHREAD", 0.082997406299543594, 0.095912224087384992, 500, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Hole Thread4@Plunger_Rear-1@Drawing View5", "CTHREAD", 0.11217500022576639, 0.095732115482902128, 500, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.097972459312839086, 0.11537520795660039, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.072727581869635932, 0.09882222644874053, 250.02100000000002, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12300090706081991, 0.09882222644874053, 250.02100000000002, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12251905410371593, 0.096091726358484536, 250.02100000000002, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.12251905410371593, 0.096091726358484536, 250.02100000000002)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.12300090706081991, 0.09882222644874053, 250.02100000000002)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12300090706081991, 0.09882222644874053, 250.02100000000002, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.097972459312839072, 0.081375207956600387, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View5", "DIMENSION", 0.096338376767731923, 0.11681140351221063, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View5", "DIMENSION", 0.09872795111748231, 0.083841171585486055, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View5", "DIMENSION", 0.09872795111748231, 0.087058750032284485, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11327700148561437, 0.10538495770927363, 250.02100000000002, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11481584335147449, 0.09167527563161075, 250.02099999999996, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11243763319514521, 0.09111569677129798, 250.02099999999996, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.11243763319514521, 0.09111569677129798, 250.02099999999996)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.11481584335147449, 0.09167527563161075, 250.02099999999996)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11481584335147449, 0.09167527563161075, 250.02099999999996, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.062972459312839055, 0.098375207956600402, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View6", "DIMENSION", 0.10103308458076889, 0.27759404218280403, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12144037036948382, 0.10419896342519318, 250.02100000000002, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12113592404575454, 0.10419896342519318, 250.02100000000002, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.14295386531086043, 0.11537520795660042, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Hole Thread3@Plunger_Rear-12@Drawing View6", "CTHREAD", 0.084990599053296201, 0.25461245159241952, 500, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Hole Thread4@Plunger_Rear-12@Drawing View6", "CTHREAD", 0.11193731218231284, 0.25513400087878757, 500, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.1008109274064608, 0.27304052637393295, 0)
+Part.ClearSelection2 True
+Part.EditDelete
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem683@Drawing View7", "CENTERMARKSYM", 0.22310278071851231, 0.10182850158726128, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.21956475947384441, 0.10515840393692978, 250.00549999999996, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.21436178705521514, 0.10973701966357774, 0)
+Part.ClearSelection2 True
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22560020747945433, 0.10005949096667312, 250.00550000000001, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22133377009617833, 0.10536652283367495, 250.00549999999996, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22102159175106059, 0.10536652283367495, 250.00549999999996, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.22102159175106059, 0.10536652283367495, 250.00549999999996)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.22133377009617833, 0.10536652283367495, 250.00549999999996)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22133377009617833, 0.10536652283367495, 250.00549999999996, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.20353960442446628, 0.11337910035661822, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22247842402827678, 0.095584934686651954, 250.00550000000001, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.21519426264219582, 0.094440280754553504, 250.00450000000001, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.21927227848101261, 0.081375207956600387, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View7", "DIMENSION", 0.20104217766352425, 0.11192226807940203, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.18199929861134118, 0.10973701966357774, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Hole Thread4@Plunger_Rear-1@Drawing View5", "CTHREAD", 0.11477865339498804, 0.09957259264105485, 500, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11371255456533798, 0.10551228611878814, 250.02100000000002, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Hole Thread4@Plunger_Rear-1@Drawing View5", "CTHREAD", 0.11447405372937373, 0.098811093477019094, 500, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.11188495657165216, 0.10490308678755954, 250.02100000000002, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.15697245931283912, 0.11537520795660039, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Hole Thread4@Plunger_Rear-1@Drawing View5", "CTHREAD", 0.11264645573568792, 0.10170479030035495, 500, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12300284436657419, 0.10018179197053786, 250.02100000000002, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.13535936847434712, 0.12137520795660039, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View5", "DIMENSION", 0.14143112413623946, 0.11586867474792852, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.074876097199514491, 0.10490308678755954, 250.02100000000002, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.075637596363550247, 0.10475078695475239, 250.02100000000002, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.052991053314817689, 0.11537520795660039, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View5", "DIMENSION", 0.13465347114080728, 0.12296681993762341, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View5", "DIMENSION", 0.1529100616142719, 0.11909420983719152, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View5", "DIMENSION", 0.13410024112645985, 0.11798774980849669, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 2, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.1529100616142719, 0.085347178961999309, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View5", "DIMENSION", 0.14372621112665437, 0.11133045168414135, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.14135205529609918, 0.083179746836129859, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View5", "DIMENSION", 0.13372084012645752, 0.11641792846390246, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.14321746344867825, 0.08250141659882837, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View5", "DIMENSION", 0.14745702743181252, 0.11709625870120394, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.15678406819470789, 0.079448930530971712, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View5", "DIMENSION", 0.13955914559969718, 0.11709767312852692, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View5", "DIMENSION", 0.11939945243073528, 0.11838996115217833, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", False, 1, 2, True, 12, 12, "", "", True, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.16359570283961328, 0.12536831647989591, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.22540068293412321, 0.10098989964792317, 250.00550000000001, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddHoleCallout2(0.25762677605856882, 0.11971172517561721, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 0, True, 12, 12, "<MOD-DIAM> <hw-diam> <hw-thru>", "", False, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.24013261121958404, 0.12830535000880269, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.060280320067916261, 0.0064600264811369712, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("DetailItem680@Drawing View3", "NOTE", 0.23382981916817355, 0.10823582278481003, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem680@Drawing View3", "NOTE", 0.23382981916817355, 0.10823582278481003, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.ActivateSheet("Sheet2")
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.2367565443208326, 0.11050426999720418, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+
+Set myNote = Part.InsertNote("<FONT size=14PTS>Machine Thread, M3x0.5 SHCS")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.24934006639799708, 0.12769151966357517, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("DetailItem685@Sheet2", "NOTE", 0.26407199468345793, 0.12585002862789257, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem685@Sheet2", "NOTE", 0.24013261121958404, 0.1264638589731201, 0, False, 0, Nothing, 0)
+Part.FontPoints 12
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem685@Sheet2", "NOTE", 0.27941775331414631, 0.1255431134552788, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.34018695749167233, 0.11725640379470706, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.30274330643279268, 0.085951056188102781, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("DetailItem685@Sheet2", "NOTE", 0.28248690504028401, 0.12431545276482373, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.28187307469505646, 0.11173193068765926, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.28709063262949053, 0.10712820309845274, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.21557939741048265, 0.12492928311005125, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem685@Sheet2", "NOTE", 0.22877674983287466, 0.12370162241959619, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.25332996364197607, 0.11142501551504548, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.27573477124278112, 0.12370162241959619, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.3223858774800738, 0.12032555552084474, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.30581245815893032, 0.11265267620550055, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.19348150498229139, 0.061090927206387605, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.14265021409399922, 0.039306088254262378, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.23766041679919153, 0.087661133677928368, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View7")
+
+Set myNote = Part.InsertNote("CTQ")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.21650026349452411, 0.076048854425366963, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem687@Drawing View7", "NOTE", 0.22011297259532103, 0.074242499874968518, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.1731477542849616, 0.080435715476334602, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.23895067004947618, 0.085338677827416082, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem687@Drawing View7", "NOTE", 0.21675831414458108, 0.072694195974627007, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.18579223613775064, 0.091015792128668324, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("Drawing View7", "DRAWINGVIEW", 0.21314560504378416, 0.10985348958282348, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem688@Drawing View7", "NOTE", 0.2175324660947518, 0.10907933763265272, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.17650241273570155, 0.086628931077700685, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Drawing View6", "DRAWINGVIEW", 0.069411392962079738, 0.14623863124084918, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem689@Drawing View6", "NOTE", 0.076120709863559663, 0.14417422604039384, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem690@Drawing View6", "NOTE", 0.077669013763901187, 0.14314202344016616, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.16514818413319704, 0.14469032734050769, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("DetailItem684@Drawing View6", "NOTE", 0.046462607024876187, 0.27889352749855856, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.16058362476173649, 0.27375294111401532, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+
+Set myNote = Part.InsertNote("Machined Threads")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.038494698128834146, 0.28352005524464752, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.Extension.SelectByID2("DetailItem691@Sheet2", "NOTE", 0.071651480309138163, 0.28249193796773886, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.082974993746339487, 0.10035280731823421, 249.9785, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddHoleCallout2(0.035757637266031303, 0.13825981262748191, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD7@Drawing View5", "DIMENSION", 0.09841433547251445, 0.10381347617273289, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 0, True, 12, 12, "<hw-threaddesc> - 6H <HOLE-DEPTH> <hw-threaddepth>", "", False, "<NUM_INST>X <MOD-DIAM> <hw-tapdrldia> <HOLE-DEPTH> <hw-tapdrldepth>", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.15780457073932314, 0.12460005851611591, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View5", "DIMENSION", 0.088911897829825073, 0.07293055383399237, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("RD7@Drawing View5", "DIMENSION", 0.036351539618699372, 0.079166528537007286, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.08980275135882719, 0.06342811619130298, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem691@Sheet2", "NOTE", 0.048000948182047365, 0.28205425660776529, 0, False, 0, Nothing, 0)
+Part.EditCopy
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0.071576738484991617, 0.086592727760709087, 0, False, 0, Nothing, 0)
+Part.Paste
+boolstatus = Part.Extension.SelectByID2("DetailItem692@Drawing View5", "NOTE", 0.080005063526973882, 0.085147872039226413, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.053034423392630703, 0.048304051141418322, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem691@Sheet2", "NOTE", 0.050224975663126448, 0.27372098648116983, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("DetailItem684@Drawing View6", "NOTE", 0.055851085722054106, 0.27285543108748866, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.071863860505155863, 0.24169543691671211, 250.00149999999999, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12249885103550456, 0.24732154697563974, 250.00149999999999, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12379718412602636, 0.24775432467248032, 250.00149999999999, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.12379718412602636, 0.24775432467248032, 250.00149999999999)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.12249885103550456, 0.24732154697563974, 250.00149999999999)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12249885103550456, 0.24732154697563974, 250.00149999999999, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.0979724593128391, 0.27703321880651, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateView("Drawing View8")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View6")
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View8")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View8")
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Title Block Table2", "TITLEBLOCK", 0.30020680693937651, 0.030463180831892422, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.19548298372513559, 0.18054699819168163, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("Drawing View3", "DRAWINGVIEW", 0.19976391732960977, 0.091805798758705676, 0, False, 0, Nothing, 0)
+Part.OpenCompFile
+Set Part = swApp.OpenDoc6("D:\KRSSG\Kicker\Kicker_V3\Plunger_Front.SLDPRT", 1, 0, "", longstatus, longwarnings)
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 22
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Front", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("CBORE for M2.5 SHCS2", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+boolstatus = Part.Extension.SelectByID2("CBORE for M2.5 SHCS2", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("CBORE for M2.5 SHCS2", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ParentChildRelationship
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Plunger_Front"
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Drawings - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 22
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_SubAssembly", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("CBORE for M2.5 SHCS2", "HOLESERIES", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Plunger_SubAssembly"
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Drawings - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.31440259495263395, 0.12393236365709349, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.26994241199381253, 0.12460855107596147, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.26663606573141152, 0.12358244361521632, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.26663606573141152, 0.12358244361521632, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.28020348660126404, 0.12563465853670661, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.28020348660126404, 0.12563465853670661, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.28328180898349942, 0.12346843167513352, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem686@Drawing View7", "NOTE", 0.27176660303513722, 0.12301238391480235, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("DetailItem680@Drawing View3", "NOTE", 0.26409790957477564, 0.11083019480908166, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem680@Drawing View3", "NOTE", 0.26409790957477564, 0.11083019480908166, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA001_Plunger_Front.PDF", 0, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.1604230198915009, 0.15151296564195288, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.35007560666920268, 0.16055367880215893, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.31086217111472142, 0.10643712665817934, 250.01050000000001, False, 0, Nothing, 0)
+Dim mySFSymbol As Object
+Set mySFSymbol = Part.Extension.InsertSurfaceFinishSymbol3(0, 0, 0.31086217111472142, 0.10537520795660039, 0.020999999999999387, 0, 1, "", "", "", "", "", "", "")
+Set myAnnotation = mySFSymbol.GetAnnotation()
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem698@Drawing View7", "SFSYMBOL", 0.31458751302356625, 0.11053500275616282, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem698@Drawing View7", "SFSYMBOL", 0.3119797736873749, 0.11239767371058523, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.34327264572167132, 0.12618143877331106, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem698@Drawing View7", "SFSYMBOL", 0.29927611923826203, 0.10868289188055899, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.3242585443891296, 0.144696517747394, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View3")
+boolstatus = Part.Extension.SelectByID2("DetailItem664@Drawing View3", "SFSYMBOL", 0.29437793756986153, 0.092087073508574077, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.20513036940771973, 0.12985851621389999, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA001_Plunger_Front.PDF", 0, 0)
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA002_Plunger_Rear.PDF", 0, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.16702466614747941, 0.14256041730064678, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+boolstatus = Part.NewSheet3("Sheet3", 12, 12, 2, 1, False, "C:\ProgramData\SolidWorks\SOLIDWORKS 2016\lang\english\sheetformat\KRSSG-A3-Landscape.slddrt", 0.41999999999999998, 0.29699999999999999, "Default")
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Set myView = Part.DropDrawingViewFromPalette(302, 0.11824150090415911, 0.093992712477396045, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Set myView = Part.CreateUnfoldedViewAt3(0.11824150090415911, 0.16849513562386981, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.10947650994575045, 0.10768801084990959, 0, False, 0, Nothing, 0)
+' MSGBOX
+' The view orientation of this drawing view has been changed.
+' Dependent drawing views will be affected.
+' Do you still want to change the drawing view's orientation?
+
+Set myView = Part.DropDrawingViewFromPalette(337, 0.30833224231464729, 0.21944164556962023, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.14946678119349002, 0.1087836347197107, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.Extension.SelectByID2("Drawing View10", "DRAWINGVIEW", 0.15439708860759491, 0.1608257685352622, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.11166775768535261, 0.1049489511754069, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View11")
+boolstatus = Part.Extension.SelectByID2("Drawing View11", "DRAWINGVIEW", 0.30394974683544296, 0.19479010849909584, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.3374299458786616, 0.0079744207607564399, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem358@Sheet Format3", "NOTE", 0.33498136682911328, 0.0091170909838790004, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem358@Sheet Format3", "NOTE", 0.33808290029187449, 0.0092803295871822233, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem358@Sheet Format3", "NOTE", 0.34330653559757762, 0.0087906137772725546, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem358@Sheet Format3", "NOTE", 0.34167414956454539, 0.00046544500880821987, 0, False, 0, Nothing, 0)
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.33847325925976834, 0.0072048623268465214, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem358@Sheet Format3", "NOTE", 0.33575219161351921, 0.0080641468467146787, 0, False, 0, Nothing, 0)
+Part.EditDelete
+
+Set myNote = Part.InsertNote("$PRPSMODEL:""SW-View Scale(View Scale)"" $COMP:""""")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.33417683666042758, 0.010149225621592164, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+Part.EditSheet
+Part.EditSketch
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.33159898310082314, 0.0080641468467146787, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet Format3", "SHEET", 0.33661147613338738, 0.0099259299730956874, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem701@Sheet Format3", "NOTE", 0.33331755214055941, 0.0097827158864509933, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet Format3", "SHEET", 0.33632504796009799, 0.0090666454532275301, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet Format3", "SHEET", 0.33632504796009799, 0.0090666454532275301, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet Format3", "SHEET", 0.33632504796009799, 0.0090666454532275301, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem701@Sheet Format3", "NOTE", 0.33489290709365105, 0.0076345045867806036, 0, False, 0, Nothing, 0)
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.35537252148384213, 0.0079209327600699847, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem701@Sheet Format3", "NOTE", 0.35737751869686785, 0.0067752200669124463, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem701@Sheet Format3", "NOTE", 0.3595257299965382, 0.0092098595398722241, 0, False, 0, Nothing, 0)
+Part.EditDelete
+
+Set myNote = Part.InsertNote("4:1")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.33346076622720411, 0.010738780910713133, 0)
+      boolstatus = myAnnotation.SetTextFormat(0, True, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.Extension.SelectByID2("DetailItem702@Sheet Format3", "NOTE", 0.33589540570016391, 0.0090666454532275301, 0, False, 0, Nothing, 0)
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection2 True
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.15330146473779385, 0.093992712477395934, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View11")
+boolstatus = Part.Extension.SelectByID2("Drawing View11", "DRAWINGVIEW", 0.31381036166365273, 0.17506887884267619, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.089755280289330913, 0.074271482820976398, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.076607793851717926, 0.21122446654611199, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.075512169981916816, 0.10330551537332378, 375.00099999999998, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.19438735985533448, 0.1076880108525281, 375.00099999999998, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.19383954792043398, 0.1076880108525281, 375.00099999999998, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.19383954792043398, 0.1076880108525281, 375.00099999999998)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.19438735985533448, 0.1076880108525281, 375.00099999999998)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.19438735985533448, 0.1076880108525281, 375.00099999999998, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.13467585895117537, 0.13056645569620254, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.174666130198915, 0.12193112115994223, 375.00099999999998, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.17411831826401444, 0.080845226042401547, 375.00099999999998, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.20522367088607588, 0.10056645569620254, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.14289303797468353, 0.18383386980370353, 375.005, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.12810211573236888, 0.19150323689231111, 375.005, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.20522367088607588, 0.18712074141048832, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("DetailItem700@Drawing View9", "CENTERMARKSYM", 0.10618963833634718, 0.08906240506329105, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem699@Drawing View9", "CENTERMARKSYM", 0.16316207956600356, 0.08906240506329105, 0, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.13522367088607593, 0.07056645569620254, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.077155605786618425, 0.11754862568073787, 375.00099999999998, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.078251229656419535, 0.11700081374583735, 375.00099999999998, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.055242264888054532, 0.13056645569620254, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.05250406871609406, 0.12905267631103065, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.076059981916817371, 0.084679909586705349, 375.00099999999998, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.076059981916817371, 0.084679909586705349, 375.00099999999998, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.055242264888054532, 0.070566455696202512, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10282818204790103, 0.096557676560131228, 375.00099999999998, False, 0, Nothing, 0)
+Set myDisplayDim = Part.AddHoleCallout2(0.051756284897658877, 0.042023277905559098, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.EditDimensionProperties2(7, 0, 0, "", "", True, 9, 0, True, 12, 12, "<NUM_INST>X <MOD-DIAM> <hw-diam> <hw-thru>", "", False, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.055651599087084114, 0.17186708421973412, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.045696907269664022, 0.15239051327260786, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View9", "DIMENSION", 0.041801593080238786, 0.045052966719556498, 0, False, 0, Nothing, 0)
+boolstatus = Part.EditDimensionProperties2(7, 0, 0, "", "", True, 9, 0, True, 12, 12, "<NUM_INST>X <MOD-DIAM> <hw-diam> <hw-thru>", "", False, "", "", False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View9", "DIMENSION", 0.13745319706501441, 0.073185791420961099, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View9", "DIMENSION", 0.1378860097527283, 0.069723289919249753, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.023623460196254276, 0.20735772461227531, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet Format3", "SHEET", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.054353161023942359, 0.069290477231535835, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.054353161023942359, 0.069290477231535835, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.024056272883968194, 0.14027175801661818, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.056084411774798032, 0.069290477231535835, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.054353161023942359, 0.071887353357819345, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View9", "DIMENSION", 0.054353161023942359, 0.071021727982391508, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View9", "DIMENSION", 0.11840943880560206, 0.071454540670105426, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View9", "DIMENSION", 0.049592221459089286, 0.044620154031842579, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View9", "DIMENSION", 0.13052819406159172, 0.13074987888691203, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View9", "DIMENSION", 0.20497197634838538, 0.1043483049363631, 0, True, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View10", "DIMENSION", 0.20583760172381321, 0.18528427753886553, 0, True, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.26080481306348069, 0.12685456469748677, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.24392511824263791, 0.095692051182084764, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View9", "DIMENSION", 0.20280791290981581, 0.1043483049363631, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View10", "DIMENSION", 0.20150947484667409, 0.18485146485115161, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.23483605180064565, 0.16321083046545579, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View9", "DIMENSION", 0.035742215452243958, 0.042456090593272988, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.12100631493188557, 0.036829525652992079, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View9", "DIMENSION", 0.053920348336228441, 0.029038897274141579, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.13572194631415874, 0.038127963716133834, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD3@Drawing View9", "DIMENSION", 0.13312507018787523, 0.074051416796388936, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.18289852927497563, 0.066260788417538435, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("DetailItem699@Drawing View9", "CENTERMARKSYM", 0.1629891456401355, 0.096124863869798682, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.19545009721867923, 0.094826425809275555, 375.00099999999998, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.17922367088607588, 0.070566455696202568, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View9", "DIMENSION", 0.18030165314869212, 0.071887353357819345, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.ActivateSheet("Sheet3")
+Part.FontPoints 16
+
+Set myNote = Part.InsertNote("<FONT size=16PTS>CTQ")
+If Not myNote Is Nothing Then
+   myNote.LockPosition = False
+   myNote.Angle = 0
+   boolstatus = myNote.SetBalloon(0, 0)
+   Set myAnnotation = myNote.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      longstatus = myAnnotation.SetLeader3(swLeaderStyle_e.swNO_LEADER, 0, True, False, False, False)
+      boolstatus = myAnnotation.SetPosition(0.12793131793530821, 0.055007658536976589, 0)
+
+      Set myTextFormat = Part.GetUserPreferenceTextFormat(0)
+      myTextFormat.Italic = False
+      myTextFormat.Underline = False
+      myTextFormat.Strikeout = False
+      myTextFormat.Bold = False
+      myTextFormat.Escapement = 0
+      myTextFormat.LineSpacing = 0.001
+      myTextFormat.CharHeightInPts = True
+      myTextFormat.TypeFaceName = "Century Gothic"
+      myTextFormat.WidthFactor = 1
+      myTextFormat.ObliqueAngle = 0
+      myTextFormat.LineLength = 0
+      myTextFormat.Vertical = False
+      myTextFormat.BackWards = False
+      myTextFormat.UpsideDown = False
+      myTextFormat.CharSpacingFactor = 1
+      boolstatus = myAnnotation.SetTextFormat(0, False, myTextFormat)
+   End If
+End If
+Part.ClearSelection2 True
+Part.WindowRedraw
+boolstatus = Part.Extension.SelectByID2("DetailItem703@Sheet3", "NOTE", 0.13096100674930561, 0.05241078241069308, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.15519851726128497, 0.042456090593272988, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.14437820006843705, 0.075349854859530663, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("DetailItem703@Sheet3", "NOTE", 0.13572194631415874, 0.054142033161548753, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.16558602176641896, 0.052843595098406998, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.253879810060058, 0.12901862813605636, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View10")
+boolstatus = Part.Extension.SelectByID2("Drawing View10", "DRAWINGVIEW", 0.16151864376130196, 0.17890356238697999, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View11")
+boolstatus = Part.Extension.SelectByID2("Drawing View11", "DRAWINGVIEW", 0.2951847558770343, 0.15589546112115721, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View9", "DIMENSION", 0.18178768535262205, 0.072080235081374233, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.22123014466546106, 0.066054303797468267, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View9")
+boolstatus = Part.Extension.SelectByID2("RD1@Drawing View9", "DIMENSION", 0.19767423146473775, 0.12467018083182629, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.19986547920433992, 0.12467018083182629, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet3")
+boolstatus = Part.Extension.SelectByID2("DetailItem703@Sheet3", "NOTE", 0.12864992766726943, 0.054002441229656334, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.25957698010849906, 0.097279584086799181, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Title Block Table3", "TITLEBLOCK", 0.29344953128785312, 0.041810890967277685, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.24521560511446913, 0.038595295889052084, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.045930325497287566, 0.25231036166365273, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.24478605786618443, 0.17013857142857139, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View9", "DRAWINGVIEW", 0.090303092224231524, 0.14877390596745024, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.041547830018083237, 0.17178200723327303, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet3", "SHEET", 0.046478137432188121, 0.24299755877034351, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA003_Plunger_Stopper.PDF", 0, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("Drawing View6", "DRAWINGVIEW", 0.1198939279045506, 0.14757432562436262, 0, False, 0, Nothing, 0)
+Part.OpenCompFile
+Set Part = swApp.OpenDoc6("D:\KRSSG\Kicker\Kicker_V3\Plunger_Rear.SLDPRT", 1, 0, "", longstatus, longwarnings)
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 22
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Rear", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.005493741288489673, -0.0021657835930000147, 0.050018890321524623, True, 0, Nothing, 0)
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.0054920888866831774, 9.7082183629026986e-005, 0.050028790205900009, True, 0, Nothing, 0)
+Set myFeature = Part.FeatureManager.InsertFeatureChamfer(4, 1, 0.001, 0.78539816339745006, 0, 0, 0, 0)
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Plunger_Rear"
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Plunger_Drawings - Sheet2", False, longstatus
+Set Part = swApp.ActiveDoc
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10962798405067159, 0.16583580436764253, 250.00349999999992, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10826494069956127, 0.16065623963342332, 250.0035, True, 0, Nothing, 0)
+Set myDim = Part.AddChamferDim(0.1148075487848908, 0.16147406564234373, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10826494069956127, 0.15302319686720553, 250.0035, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10771972335911714, 0.15220537085653935, 250.00349999999997, True, 0, Nothing, 0)
+Set myDim = Part.AddChamferDim(0.1298010256471043, 0.13721189399258008, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10853754936978333, 0.15193276218631729, 250.00349999999997, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.10853754936978333, 0.15465884888853793, 250.0035, True, 0, Nothing, 0)
+Set myDim = Part.AddChamferDim(0.10935537538044951, 0.149751892822795, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("RD5@Drawing View6", "DIMENSION", 0.1469753718710943, 0.14648058878013023, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View6")
+boolstatus = Part.Extension.SelectByID2("RD6@Drawing View6", "DIMENSION", 0.13688885107287796, 0.13884754601391247, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View5")
+boolstatus = Part.Extension.SelectByID2("Drawing View5", "DRAWINGVIEW", 0.12189537421066446, 0.086506681331276231, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.17287319554219036, 0.061154075000624308, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.36475687160940318, 0.14822609403254963, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA002_Plunger_Rear.PDF", 0, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.31809125388320825, 0.10044684089920214, 250.01050000000001, False, 0, Nothing, 0)
+
+Dim myDatumTag As Object
+Set myDatumTag = Part.InsertDatumTag2()
+If Not myDatumTag Is Nothing Then
+   myDatumTag.FilledTriangle = True
+   myDatumTag.Shoulder = False
+   boolstatus = myDatumTag.SetLabel("A")
+   Set myAnnotation = myDatumTag.GetAnnotation()
+   If Not myAnnotation Is Nothing Then
+      boolstatus = myAnnotation.SetPosition(0.31986345344265799, 0.11710551675628346, 0.020999999999999418)
+   End If
+End If
+Part.WindowRedraw
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem698@Drawing View7", "SFSYMBOL", 0.30107813811249118, 0.10399124001635571, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.34254760780361404, 0.14049855094101943, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem709@Drawing View7", "DATUMTAG", 0.32057233326643786, 0.11994103605140297, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.34148428806794423, 0.13092867331999108, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.30285033767194086, 0.085914804511714626, 250.01050000000001, False, 0, Nothing, 0)
+
+Dim myGtol As Object
+Dim myAnno As Object
+Set myGtol = Part.InsertGtol()
+If Not myGtol Is Nothing Then
+   myGtol.SetFrameSymbols2 1, "", False, "", False, "", "", "", ""
+   myGtol.SetFrameValues 1, "", "", "", "", ""
+   myGtol.SetFrameSymbols2 2, "", False, "", False, "", "", "", ""
+   myGtol.SetFrameValues 2, "", "", "", "", ""
+   myGtol.SetPTZHeight "", False
+   myGtol.SetCompositeFrame False
+   myGtol.SetBelowFrame ""
+   myGtol.SetBetweenTwoPoints False, "", ""
+   Set myAnno = myGtol.GetAnnotation()
+   If Not myAnno Is Nothing Then
+      boolstatus = myAnno.SetPosition(0.31490129467619882, 0.075636047065160583, 0.012467208413966951)
+      longstatus = myAnno.SetLeader3(swLeaderStyle_e.swBENT, 0, True, False, False, False)
+   End If
+End If
+Part.WindowRedraw
+boolstatus = Part.Extension.SelectByID2("DetailItem710@Drawing View7", "GTOL", 0.31631905432375856, 0.074572727329490773, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem710@Drawing View7", "GTOL", 0.31631905432375856, 0.074572727329490773, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet2")
+boolstatus = Part.Extension.SelectByID2("Sheet2", "SHEET", 0.39216919546820556, 0.10611787948769534, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByID2("DetailItem668@Drawing View1", "GTOL", 0.1225680123438657, 0.055652673022905691, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.086133611858197331, 0.031585913069069715, 0, False, 0, Nothing, 0)
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.083647301628210879, 0.017688642756260309, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByID2("DetailItem668@Drawing View1", "GTOL", 0.12100734626084705, 0.05948273829606375, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("DetailItem666@Drawing View1", "DATUMTAG", 0.088710773240861046, 0.098988367793725246, 0, False, 0, Nothing, 0)
+Part.EditDelete
+Part.ViewZoomtofit2
+boolstatus = Part.ActivateView("Drawing View7")
+boolstatus = Part.Extension.SelectByID2("DetailItem709@Drawing View7", "DATUMTAG", 0.31348353502863907, 0.11249779790171426, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("DetailItem710@Drawing View7", "GTOL", 0.32411673238533723, 0.072091647946261203, 0, False, 0, Nothing, 0)
+Part.EditDelete
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+Part.ViewZoomtofit2
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA002_Plunger_Rear.PDF", 0, 0)
+Part.ClearSelection2 True
+longstatus = Part.SaveAs3("D:\KRSSG\Kicker\Kicker_V3\SSLX2KA001_Plunger_Front.PDF", 0, 0)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub

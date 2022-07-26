@@ -1,0 +1,155 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 05/11/19 by Ankush
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = _
+Application.SldWorks
+
+swApp.ActivateDoc2 "Assem1_swiss_chipkicker", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Part.ViewRotateminusx
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateplusx
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusy
+Part.ViewRotateplusy
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusy
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateminusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateplusy
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.075052458679529366, 0.15844066397664847, 0.27931552453738107, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.096278393646460264, 0.15884066397666174, 0.22067587801353739, False, 0, Nothing, 0)
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ClearSelection2 True
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusy
+Part.ViewRotateplusy
+Part.ViewRotateminusy
+Part.ViewRotateplusy
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.084870755545223608, 0.15024066397626257, 0.3113569033146304, False, 0, Nothing, 0)
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.084870755545223608, 0.15024066397626257, 0.3113569033146304, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.085479687058806375, 0.15024066397558045, 0.2979604100158097, False, 0, Nothing, 0)
+Part.TranslateComponent
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.085479687058806375, 0.15024066397558045, 0.2979604100158097, False, 0, Nothing, 0)
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateminusx
+Part.ViewRotateplusx
+Part.ViewRotateplusx
+Part.ClearSelection2 True
+Set Part = Nothing
+swApp.CloseDoc "Assem1_swiss_chipkicker"
+swApp.ExitApp
+End Sub
